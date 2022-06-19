@@ -35,8 +35,8 @@ while True:
     #go to page
     driver.get(URL)
 
-    #honor Tesla's crawl-delay request (found in their robots.txt)
-    sleep(10)
+    #honor Tesla's crawl-delay request (found in their robots.txt) + check every 10 minutes instead since we don't need to check that frequently.
+    sleep(600)
 
     soup = BeautifulSoup(driver.page_source, "lxml")
 
