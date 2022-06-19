@@ -47,7 +47,7 @@ while True:
     adapters = adapter_info.split(',')
 
     #the adapter we are interested in
-    our_adapter = adapters[1]
+    our_adapter = adapters[3]
 
     #desktop notify when adapter is in stock
     if our_adapter.split(':')[1] == "true":
@@ -55,7 +55,7 @@ while True:
             title = our_adapter,
             message = "adapter in stock",
             app_icon = None,
-            timeout = 50,
+            timeout = 5,
         )
 
         break
